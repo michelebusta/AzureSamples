@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SocialLoginModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SocialLoginEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Profiles" EntityType="SocialLoginModel.Profile" />
+    <EntitySet Name="Users" EntityType="SocialLoginModel.User" />
+    <EntitySet Name="UserLogins" EntityType="SocialLoginModel.UserLogin" />
+    <AssociationSet Name="FK_User_Profile" Association="SocialLoginModel.FK_User_Profile">
+      <End Role="Profile" EntitySet="Profiles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLogin_User" Association="SocialLoginModel.FK_UserLogin_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserLogin" EntitySet="UserLogins" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Profile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Users" Relationship="SocialLoginModel.FK_User_Profile" FromRole="Profile" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ProfileId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Profile" Relationship="SocialLoginModel.FK_User_Profile" FromRole="User" ToRole="Profile" />
+    <NavigationProperty Name="UserLogins" Relationship="SocialLoginModel.FK_UserLogin_User" FromRole="User" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Issuer" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="SocialLoginModel.FK_UserLogin_User" FromRole="UserLogin" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_User_Profile">
+    <End Role="Profile" Type="SocialLoginModel.Profile" Multiplicity="1" />
+    <End Role="User" Type="SocialLoginModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profile">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ProfileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLogin_User">
+    <End Role="User" Type="SocialLoginModel.User" Multiplicity="1" />
+    <End Role="UserLogin" Type="SocialLoginModel.UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

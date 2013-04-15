@@ -1,0 +1,8 @@
+C:\Snapboard\Demos\AccessControl\SocialLoginForms-WithAssociation\SocialLoginForms.Entities\bin\Debug\SocialLoginForms.Entities.dll
+C:\Snapboard\Demos\AccessControl\SocialLoginForms-WithAssociation\SocialLoginForms.Entities\bin\Debug\SocialLoginForms.Entities.pdb
+C:\Snapboard\Demos\AccessControl\SocialLoginForms-WithAssociation\SocialLoginForms.Entities\obj\Debug\SocialLoginForms.Entities.dll
+C:\Snapboard\Demos\AccessControl\SocialLoginForms-WithAssociation\SocialLoginForms.Entities\obj\Debug\SocialLoginForms.Entities.pdb
+C:\GitHub\AzureSamples\Identity\SocialLoginAccessControl\SocialLoginForms.Entities\bin\Debug\SocialLoginForms.Entities.dll
+C:\GitHub\AzureSamples\Identity\SocialLoginAccessControl\SocialLoginForms.Entities\bin\Debug\SocialLoginForms.Entities.pdb
+C:\GitHub\AzureSamples\Identity\SocialLoginAccessControl\SocialLoginForms.Entities\obj\Debug\SocialLoginForms.Entities.dll
+C:\GitHub\AzureSamples\Identity\SocialLoginAccessControl\SocialLoginForms.Entities\obj\Debug\SocialLoginForms.Entities.pdb

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoleModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ABCSite" version="1.7.30602.1703" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <Runtime>
+    <EntryPoint>
+      <NetFxEntryPoint assemblyName="ABCSite.dll" targetFrameworkVersion="v3.5" />
+    </EntryPoint>
+  </Runtime>
+  <Properties>
+    <Property name="TargetFrameworkVersion" value="v4.0" />
+    <Property name="RoleType" value="Web" />
+    <Property name="RoleName" value="ABCSite" />
+    <Property name="ProjectName" value="ABCSite" />
+    <Property name="Configuration" value="Release" />
+    <Property name="Platform" value="AnyCPU" />
+    <Property name="RoleTargetFramework" value="v4.0" />
+    <Property name="OutputDir" value="C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\MultipleSitesOneRole\obj\Release\ABCSite\" />
+    <Property name="EntryPoint" value="ABCSite.dll" />
+    <Property name="SourceDir" value="C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\" />
+    <Property name="SitePhysicalPath" value="C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\MultipleSitesOneRole\obj\Release\ABCSite\" />
+    <Property name="TargetRuntimeVersion" value="v4.0" />
+  </Properties>
+  <Sites>
+    <Site name="Web" physicalDirectory="C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\MultipleSitesOneRole\obj\Release\ABCSite\">
+      <Bindings>
+        <Binding name="Endpoint1" endpointName="Endpoint1" hostHeader="abc.kraniacs.com" />
+      </Bindings>
+    </Site>
+    <Site name="XYZ" physicalDirectory="C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\MultipleSitesOneRole\Sites\XYZSite">
+      <Bindings>
+        <Binding name="Endpoint1" endpointName="Endpoint1" hostHeader="xyz.kraniacs.com" />
+      </Bindings>
+    </Site>
+  </Sites>
+</RoleModel>

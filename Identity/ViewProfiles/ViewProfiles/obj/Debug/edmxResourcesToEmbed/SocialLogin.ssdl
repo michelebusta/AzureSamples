@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SocialLoginModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SocialLoginModelStoreContainer">
+    <EntitySet Name="Profile" EntityType="SocialLoginModel.Store.Profile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="SocialLoginModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserLogin" EntityType="SocialLoginModel.Store.UserLogin" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_User_Profile" Association="SocialLoginModel.Store.FK_User_Profile">
+      <End Role="Profile" EntitySet="Profile" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLogin_User" Association="SocialLoginModel.Store.FK_UserLogin_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserLogin" EntitySet="UserLogin" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Profile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Modified" Type="datetime" Nullable="false" />
+    <Property Name="ProfileId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Issuer" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_User_Profile">
+    <End Role="Profile" Type="SocialLoginModel.Store.Profile" Multiplicity="1" />
+    <End Role="User" Type="SocialLoginModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profile">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ProfileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLogin_User">
+    <End Role="User" Type="SocialLoginModel.Store.User" Multiplicity="1" />
+    <End Role="UserLogin" Type="SocialLoginModel.Store.UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

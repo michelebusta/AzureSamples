@@ -1,0 +1,24 @@
+Sample Setup
+
+To run locally:
+- edit hosts file in C:\Windows\System32\drivers\etc to add these entries:
+127.255.0.1    abc.bustacloud.com
+127.255.0.1    xyz.bustacloud.com
+
+- note that both web projects have a pre and post build event
+pre-build event is to delete \Sites subdirectory
+post-build event deploys each web site to the \Sites directory
+
+this is based on comments shown in this post which discuss how to automate publish and deploy of compiled sites
+http://www.wadewegner.com/2011/02/running-multiple-websites-in-a-windows-azure-web-role/
+
+- run the cloud service and go!
+
+To deploy and run:
+- replace bustacloud with your own domain
+- remove the hosts file entry so DNS can resolve
+- publish to Azure, production slot
+- point your domain at the production IP address
+create two A records one for * and another for @ to point to your IP
+- you should be able to browse to abc. and xyz. at your domain
+

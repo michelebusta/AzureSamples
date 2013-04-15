@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="MultipleSitesOneRole" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-05.1.7">
+  <WebRole name="ABCSite" vmsize="ExtraSmall">
+    <Sites>
+      <!--<Site name="Web" >
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>-->
+      <Site name="Web" physicalDirectory="Sites\ABCSite">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" hostHeader="abc.bustacloud.com" />
+        </Bindings>
+      </Site>
+      <Site name="XYZ" physicalDirectory="Sites\XYZSite">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" hostHeader="xyz.bustacloud.com" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+    </Imports>
+  </WebRole>
+</ServiceDefinition>

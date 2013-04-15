@@ -1,0 +1,7 @@
+C:\Snapboard\Demos\AccessControl\ViewProfiles\ViewProfiles\bin\ViewProfiles.dll
+C:\Snapboard\Demos\AccessControl\ViewProfiles\ViewProfiles\bin\ViewProfiles.pdb
+C:\Snapboard\Demos\AccessControl\ViewProfiles\ViewProfiles\bin\EntityFramework.dll
+C:\Snapboard\Demos\AccessControl\ViewProfiles\ViewProfiles\bin\EntityFramework.xml
+C:\Snapboard\Demos\AccessControl\ViewProfiles\ViewProfiles\obj\Debug\ViewProfiles.csprojResolveAssemblyReference.cache
+C:\Snapboard\Demos\AccessControl\ViewProfiles\ViewProfiles\obj\Debug\ViewProfiles.dll
+C:\Snapboard\Demos\AccessControl\ViewProfiles\ViewProfiles\obj\Debug\ViewProfiles.pdb

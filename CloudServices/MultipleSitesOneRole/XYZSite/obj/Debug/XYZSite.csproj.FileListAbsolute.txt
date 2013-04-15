@@ -1,0 +1,10 @@
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\bin\XYZSite.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\bin\XYZSite.pdb
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\obj\Debug\XYZSite.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\obj\Debug\XYZSite.pdb
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\obj\Debug\XYZSite.csprojResolveAssemblyReference.cache
+C:\GitHub\AzureSamples\CloudServices\MultipleSitesOneRole\XYZSite\bin\XYZSite.dll
+C:\GitHub\AzureSamples\CloudServices\MultipleSitesOneRole\XYZSite\bin\XYZSite.pdb
+C:\GitHub\AzureSamples\CloudServices\MultipleSitesOneRole\XYZSite\obj\Debug\XYZSite.dll
+C:\GitHub\AzureSamples\CloudServices\MultipleSitesOneRole\XYZSite\obj\Debug\XYZSite.pdb
+C:\GitHub\AzureSamples\CloudServices\MultipleSitesOneRole\XYZSite\obj\Debug\XYZSite.csprojResolveAssemblyReference.cache

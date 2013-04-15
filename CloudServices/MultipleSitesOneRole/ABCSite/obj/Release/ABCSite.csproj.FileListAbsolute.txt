@@ -1,0 +1,9 @@
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\bin\ABCSite.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\bin\ABCSite.pdb
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\bin\Microsoft.WindowsAzure.StorageClient.xml
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\obj\Release\ABCSite.csprojResolveAssemblyReference.cache
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\obj\Release\ABCSite.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\ABCSite\obj\Release\ABCSite.pdb

@@ -1,0 +1,54 @@
+﻿@model SocialLoginModules.Models.ProfileModel
+
+@{
+    ViewBag.Title = "Create Profile";
+}
+
+<h2>Create Profile</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ProfileModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NameId)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.NameId, new {  @readonly = "readonly", style = "background-color: #E6E6E6;"})
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Issuer)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Issuer, new {  @readonly = "readonly", style = "background-color: #E6E6E6;"})
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FriendlyName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FriendlyName)
+            @Html.ValidationMessageFor(model => model.FriendlyName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

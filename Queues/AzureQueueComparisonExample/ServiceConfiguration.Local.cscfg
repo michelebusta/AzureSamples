@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureQueueComparisonExample" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" schemaVersion="2012-05.1.7">
+  <Role name="QueueComparison.Web">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="SendGridUser" value="" />
+      <Setting name="SendGridPassword" value="" />
+      <Setting name="SendGridHost" value="" />
+      <Setting name="SendGridPort" value="25" />
+      <Setting name="SmtpService" value="Azure" />
+      <Setting name="SmtpOutAddress" value="127.0.0.1" />
+      <Setting name="SmtpOutPort" value="25" />
+      <Setting name="SmtpFromAddress" value="noreply@bustacloud.com" />
+      <Setting name="SmtpAdminAddress" value="admin@bustacloud.com" />
+      <Setting name="REC_EnableServiceBusQueue" value="true" />
+      <Setting name="REC_EnableStorageQueue" value="true" />
+      <Setting name="ServiceBusIssuer" value="owner" />
+      <Setting name="ServiceBusKey" value="" />
+      <Setting name="ServiceBusQueue" value="smtpqueue" />
+      <Setting name="StorageQueueConnection" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageQueueName" value="smtpstoragequeue" />
+      <Setting name="REC_ConnectionLimit" value="12" />
+      <Setting name="REC_LogTransferPeriod" value="1" />
+      <Setting name="REC_LogLevel" value="Verbose" />
+      <Setting name="REC_PerfTransferPeriod" value="1" />
+      <Setting name="REC_BufferQuota" value="20" />
+      <Setting name="REC_PerfSampleRate" value="1" />
+      <Setting name="REC_EnableWindowsLogs" value="false" />
+      <Setting name="REC_SBReceiveTimeout" value="20" />
+      <Setting name="QueueInteralExponent" value="2" />
+      <Setting name="QueueMinInterval" value="1" />
+      <Setting name="REC_DisableDiagnostics" value="false" />
+      <Setting name="REC_DiagnosticsQuota" value="8192" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-04-10T23:59:59.0000000-07:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="ServiceBusNamespace" value="" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="5A6A828975E2F316E19315A43A9B7B74223B7E62" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

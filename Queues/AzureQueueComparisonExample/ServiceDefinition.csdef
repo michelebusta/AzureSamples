@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureQueueComparisonExample" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-05.1.7">
+  <WebRole name="QueueComparison.Web" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="DataConnectionString" />
+      <Setting name="SmtpService" />
+      <Setting name="SendGridHost" />
+      <Setting name="SendGridPort" />
+      <Setting name="SendGridUser" />
+      <Setting name="SendGridPassword" />
+      <Setting name="SmtpOutAddress" />
+      <Setting name="SmtpOutPort" />
+      <Setting name="SmtpFromAddress" />
+      <Setting name="SmtpAdminAddress" />
+      <Setting name="REC_EnableServiceBusQueue" />
+      <Setting name="REC_EnableStorageQueue" />
+      <Setting name="ServiceBusIssuer" />
+      <Setting name="ServiceBusNamespace" />
+      <Setting name="ServiceBusKey" />
+      <Setting name="ServiceBusQueue" />
+      <Setting name="REC_SBReceiveTimeout" />
+      <Setting name="StorageQueueConnection" />
+      <Setting name="StorageQueueName" />
+      <Setting name="QueueInteralExponent" />
+      <Setting name="QueueMinInterval" />
+      <Setting name="REC_DisableDiagnostics" />
+      <Setting name="REC_DiagnosticsQuota" />
+      <Setting name="REC_EnableWindowsLogs" />
+      <Setting name="REC_ConnectionLimit" />
+      <Setting name="REC_LogTransferPeriod" />
+      <Setting name="REC_LogLevel" />
+      <Setting name="REC_PerfTransferPeriod" />
+      <Setting name="REC_BufferQuota" />
+      <Setting name="REC_PerfSampleRate" />
+    </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" cleanOnRoleRecycle="false" sizeInMB="8192" />
+    </LocalResources>
+  </WebRole>
+</ServiceDefinition>

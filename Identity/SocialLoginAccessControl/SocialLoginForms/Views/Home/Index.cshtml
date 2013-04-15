@@ -1,0 +1,64 @@
+﻿@model SocialLoginModules.Models.ProfileModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .display-label {
+        color:blue;
+        font-size:1.5em;
+    }
+
+   .display-field {
+        font-size:1.5em;
+    }
+</style>
+
+<div style="float: left">
+    <img src="~/Images/rainbow-pot-of-gold.jpg" /></div>
+<div style="float: left; margin-left:20px; border:2px solid black; width:300px; overflow:hidden; padding:10px">
+
+    <fieldset>
+        <legend>ProfileModel</legend>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.NameId):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.NameId)
+        </div>
+        <br />
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Issuer):
+        </div>
+
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Issuer)
+        </div>
+        <br />
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.FriendlyName):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.FriendlyName)
+        </div>
+        <br />
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Email):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    </fieldset>
+
+    <section class="social" id="socialLoginForm">
+
+            <h2><a href="https://bustacloud.accesscontrol.windows.net:443/v2/wsfederation?wa=wsignin1.0&wtrealm=http%3a%2f%2flocalhost%2fSocialLoginForms%2f">Associate with a social login.</a></h2>
+
+</section>
+
+</div>

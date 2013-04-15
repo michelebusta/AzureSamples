@@ -1,0 +1,5 @@
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\bin\XYZSite.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\bin\XYZSite.pdb
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\obj\Release\XYZSite.dll
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\obj\Release\XYZSite.pdb
+C:\Samples\Azure\WindowsAzure\MultipleSitesOneRole\XYZSite\obj\Release\XYZSite.csprojResolveAssemblyReference.cache

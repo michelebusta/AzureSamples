@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureQueueComparisonExample" schemaVersion="2012-05.1.7" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="QueueComparison.Web">
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="8192" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="DataConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" />
+      <Setting name="QueueInteralExponent" />
+      <Setting name="QueueMinInterval" />
+      <Setting name="REC_BufferQuota" />
+      <Setting name="REC_ConnectionLimit" />
+      <Setting name="REC_DiagnosticsQuota" />
+      <Setting name="REC_DisableDiagnostics" />
+      <Setting name="REC_EnableServiceBusQueue" />
+      <Setting name="REC_EnableStorageQueue" />
+      <Setting name="REC_EnableWindowsLogs" />
+      <Setting name="REC_LogLevel" />
+      <Setting name="REC_LogTransferPeriod" />
+      <Setting name="REC_PerfSampleRate" />
+      <Setting name="REC_PerfTransferPeriod" />
+      <Setting name="REC_SBReceiveTimeout" />
+      <Setting name="SendGridHost" />
+      <Setting name="SendGridPassword" />
+      <Setting name="SendGridPort" />
+      <Setting name="SendGridUser" />
+      <Setting name="ServiceBusIssuer" />
+      <Setting name="ServiceBusKey" />
+      <Setting name="ServiceBusNamespace" />
+      <Setting name="ServiceBusQueue" />
+      <Setting name="SmtpAdminAddress" />
+      <Setting name="SmtpFromAddress" />
+      <Setting name="SmtpOutAddress" />
+      <Setting name="SmtpOutPort" />
+      <Setting name="SmtpService" />
+      <Setting name="StorageQueueConnection" />
+      <Setting name="StorageQueueName" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" localPort="80" />
+      <InputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" protocol="tcp" port="3389" localPort="*" ignoreRoleInstanceStatus="true" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" protocol="tcp">
+        <FixedPortRange min="3389" max="3389" />
+      </InternalEndpoint>
+    </Endpoints>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+</ServiceDefinition>
